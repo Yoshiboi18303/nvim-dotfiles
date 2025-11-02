@@ -37,23 +37,24 @@ return {
 
     math.randomseed(os.time())
 
-    local quote = string.rep("\n", 2) .. quotes[math.random(#quotes)]
+    local quote = string.rep("\n", 2) .. quotes[math.random(#quotes)] .. " - " .. os.date("%Y/%m/%d %H:%M:%S")
 
     require("dashboard").setup({
       theme = "hyper",
       shortcut_type = "letter",
-      hide = {
-        statusline = true,
-        tabline = true,
-        winbar = true,
-      },
       config = {
         header = vim.split(orca, "\n"),
         packages = { enable = true },
+        hide = {
+          statusline = false,
+          tabline = false,
+          winbar = false,
+        },
         shortcut = {
           { desc = "Find Files", key = "f", action = "Telescope find_files", icon = "🔍" },
           { desc = "New File", key = "n", action = "enew", icon = "📄" },
           { desc = "Recent Files", key = "r", action = "Telescope oldfiles", icon = "📂" },
+          { desc = "Extras", key = "x", action = "LazyExtras", icon = "⚙️" },
           { desc = "Config", key = "c", action = "edit $MYVIMRC", icon = "🛠" },
           { desc = "Quit", key = "q", action = "quit", icon = "👋" },
         },

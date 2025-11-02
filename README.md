@@ -15,6 +15,7 @@ My personal dotfiles for Neovim, based off of [LazyVim](https://github.com/LazyV
   <summary>Clearing current configuration</summary>
 
 > [!WARNING]
+>
 > This will delete your current configuration(s) in: `$HOME/.config/nvim`
 
 ```bash
@@ -23,7 +24,8 @@ rm -rf $HOME/.config/nvim
 
 </details>
 
-> [!INFO]
+> [!NOTE]
+>
 > This will mainly focus on Linux, if you use Windows,
 > you'll have to figure out the equivalent commands.
 
