@@ -15,12 +15,9 @@ return {
     opts = {
       sources = {
         "filesystem",
-        "document_symbols",
+        -- "document_symbols",
       },
-    },
-    window = {
-      position = "right",
-      width = 20,
+      theme = "auto",
     },
   },
   {

@@ -30,9 +30,14 @@ return {
         },
       })
 
-      vim.keymap.set({ "n", "v" }, "<C-.>", function() -- For my VS Code muscle memory.
+      local set = vim.keymap.set
+
+      set({ "n", "v" }, "<C-.>", function() -- For my VS Code muscle memory.
         vim.lsp.buf.code_action()
       end, { desc = "Code Action" })
+      set("n", "<leader>sy", function()
+        require("telescope.builtin").colorscheme()
+      end, { desc = "Change Theme" })
     end,
   },
   {

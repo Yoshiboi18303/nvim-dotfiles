@@ -2,5 +2,7 @@
 -- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
 -- Add any additional options here
 
+local opt = vim.opt
+
 -- I hate relative numbers
-vim.opt.relativenumber = false
+opt.relativenumber = false

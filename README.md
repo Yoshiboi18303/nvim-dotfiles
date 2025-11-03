@@ -14,6 +14,9 @@ My personal dotfiles for Neovim, based off of [LazyVim](https://github.com/LazyV
 <details>
   <summary>Clearing current configuration</summary>
 
+This is important so that you don't have to worry about conflicts between
+different configurations.
+
 > [!WARNING]
 >
 > This will delete your current configuration(s) in: `$HOME/.config/nvim`
