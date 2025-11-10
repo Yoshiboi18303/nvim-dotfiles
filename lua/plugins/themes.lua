@@ -9,13 +9,19 @@ return {
   -- require("plugins.themes.embark"),
   -- require("plugins.themes.everforest"),
   -- require("plugins.themes.everviolet"),
+  require("plugins.themes.github"),
+  require("plugins.themes.kanagawa"),
   -- require("plugins.themes.lavi"),
   require("plugins.themes.material"),
   -- require("plugins.themes.monokai"),
   require("plugins.themes.moonlight"),
+  -- require("plugins.themes.nightcity"),
+  -- require("plugins.themes.nightfox"),
   -- require("plugins.themes.NeoSolarized"),
   -- require("plugins.themes.nordic"),
-  -- require("plugins.themes.onedarkpro"),
+  require("plugins.themes.onedarkpro"),
+  -- require("plugins.themes.rose-pine"),
+  require("plugins.themes.synthweave"),
   require("plugins.themes.tokyonight"),
   -- require("plugins.themes.vercel"),
   require("plugins.themes.vscode"),
@@ -24,7 +30,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin-mocha", -- Replace this with the theme you want, make sure it's uncommented above.
+      colorscheme = "github_dark_default", -- Replace this with the theme you want, make sure it's uncommented above.
     },
   },
 }
