@@ -30,7 +30,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "github_dark_default", -- Replace this with the theme you want, make sure it's uncommented above.
+      colorscheme = "catppuccin-macchiato", -- Replace this with the theme you want, make sure it's uncommented above.
     },
   },
 }

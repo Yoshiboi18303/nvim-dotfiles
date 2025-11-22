@@ -23,7 +23,7 @@ return {
                     --
         ]]
 
-    orca = string.rep("\n", 3) .. orca .. "\n\n"
+    orca = string.rep("\n", 3) .. orca .. string.rep("\n", 2)
 
     local quotes = {
       "Orcas deserve the best you can give them.",
@@ -35,6 +35,7 @@ return {
       'Please don\'t take a shit on the public bathroom floor and pass it off as: "They pay people to clean it."',
     }
 
+    -- Actually makes shit random.
     math.randomseed(os.time())
 
     local quote = string.rep("\n", 2) .. quotes[math.random(#quotes)] .. " - " .. os.date("%Y/%m/%d %H:%M:%S")
