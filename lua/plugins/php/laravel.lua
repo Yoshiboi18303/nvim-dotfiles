@@ -7,80 +7,88 @@ return {
       "nvim-lua/plenary.nvim",
       "nvim-neotest/nvim-nio",
       "ravitemer/mcphub.nvim",
+      "folke/which-key.nvim",
       "nvim-telescope/telescope.nvim", -- Picker, you can change this if you want a different one.
     },
     cmd = { "Sail", "Artisan", "Composer", "Npm", "Yarn", "Laravel" },
     config = true,
+    init = function()
+      require("which-key").add({
+        "<leader>l",
+        group = "laravel",
+        mode = "n",
+      })
+    end,
     keys = {
       {
         "<leader>ll",
         function()
           Laravel.pickers.laravel()
         end,
-        desc = "Laravel: Open Laravel Picker",
+        desc = "Open Laravel Picker",
       },
       {
         "<c-g>",
         function()
           Laravel.commands.run("view:finder")
         end,
-        desc = "Laravel: Open View Finder",
+        desc = "Open View Finder",
       },
       {
         "<leader>la",
         function()
           Laravel.pickers.artisan()
         end,
-        desc = "Laravel: Open Artisan Picker",
+        desc = "Open Artisan Picker",
       },
       {
         "<leader>lt",
         function()
           Laravel.commands.run("actions")
         end,
-        desc = "Laravel: Open Actions Picker",
+        desc = "Open Actions Picker",
       },
       {
         "<leader>lr",
         function()
           Laravel.pickers.routes()
         end,
-        desc = "Laravel: Open Routes Picker",
+        desc = "Open Routes Picker",
       },
       {
         "<leader>lh",
         function()
           Laravel.run("artisan docs")
         end,
-        desc = "Laravel: Open Documentation",
+        desc = "Open Documentation",
       },
       {
         "<leader>lm",
         function()
           Laravel.pickers.make()
         end,
-        desc = "Laravel: Open Make Picker",
+        desc = "Open Make Picker",
       },
       {
         "<leader>lc",
         function()
           Laravel.pickers.commands()
         end,
-        desc = "Laravel: Open Commands Picker",
+        desc = "Open Commands Picker",
       },
       {
         "<leader>lo",
         function()
           Laravel.pickers.resources()
         end,
-        desc = "Laravel: Open Resources Picker",
+        desc = "Open Resources Picker",
       },
       {
         "<leader>lp",
         function()
           Laravel.commands.run("command_center")
         end,
-        desc = "Laravel: Open Command Center",
+        desc = "Open Command Center",
       },
       {
         "gf",

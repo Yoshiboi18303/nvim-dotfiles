@@ -29,7 +29,7 @@ return {
       "Orcas deserve the best you can give them.",
       "Remember, always return your cart.",
       "You're probably building something else you'll drop in 5 seconds.",
-      "Lazy Bones don't know what they are, you do.",
+      "Lazybones don't know what they are, you do.",
       "Every coding session is a chance to make something, or drop it immediately.",
       "Don't let your laziness get the better of you.",
       'Please don\'t take a shit on the public bathroom floor and pass it off as: "They pay people to clean it."',

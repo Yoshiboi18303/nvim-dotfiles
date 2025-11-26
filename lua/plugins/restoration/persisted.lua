@@ -3,10 +3,9 @@ return {
   event = "BufReadPre",
   opts = {
     ignored_dirs = {
-      "~/",
-      "~/projects",
-      "~/Downloads",
-      "/",
+      { "~/", exact = true },
+      "~/Downloads", -- Ignores subdirectories as well.
+      { "/", exact = true },
     },
   },
 }

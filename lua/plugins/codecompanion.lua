@@ -1,9 +1,16 @@
 -- Don't need this plugin? Uncomment the line below.
--- if true then return {} end
+if true then
+  return {}
+end
 
 -- Change this to false if you don't want the history plugin
 -- The history plugin requires VectorCode if you want to load it.
 local use_history = true
+
+local ollama = {
+  adapter = "ollama",
+  model = "codegemma:7b",
+}
 
 return {
   {
@@ -42,11 +49,33 @@ return {
           },
         },
       },
+      strategies = {
+        chat = ollama,
+        cmd = ollama,
+        inline = ollama,
+      },
     },
     dependencies = {
+      "nvim-treesitter/nvim-treesitter",
       "nvim-lua/plenary.nvim",
       "ravitemer/mcphub.nvim",
       "ravitemer/codecompanion-history.nvim",
+      {
+        "MeanderingProgrammer/render-markdown.nvim",
+        ft = { "markdown", "codecompanion" },
+      },
+      {
+        "HakonHarnes/img-clip.nvim",
+        opts = {
+          filetypes = {
+            codecompanion = {
+              prompt_for_file_name = false,
+              template = "[Image]($FILE_PATH)",
+              use_absolute_path = true,
+            },
+          },
+        },
+      },
     },
   },
 }

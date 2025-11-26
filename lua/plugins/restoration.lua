@@ -6,5 +6,5 @@
 -- Only pick one, that's all you need.
 return {
   -- require('plugins.restoration.auto-session'),
-  -- require('plugins.restoration.persisted')
+  require("plugins.restoration.persisted"),
 }

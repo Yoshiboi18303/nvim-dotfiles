@@ -3,6 +3,10 @@
 -- Add any additional options here
 
 local opt = vim.opt
+local g = vim.g
 
 -- I hate relative numbers
 opt.relativenumber = false
+
+-- I don't use Perl.
+g.loaded_perl_provider = 0

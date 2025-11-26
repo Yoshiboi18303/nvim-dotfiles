@@ -1,35 +1,34 @@
 return {
   {
     "nvim-telescope/telescope.nvim",
-    tag = "0.1.8",
+    tag = "v0.1.9",
     dependencies = {
       "nvim-lua/plenary.nvim",
     },
-    config = function()
-      local telescope = require("telescope")
-      telescope.setup({
-        defaults = {
-          prompt_prefix = "🔍 ",
-          selection_caret = "➤ ",
-          layout_strategy = "horizontal",
-          file_ignore_patterns = {
-            "node_modules/",
-            ".git/",
-            "target/",
-            ".next/",
-            ".nuxt/",
-            ".sveltekit/",
-            "dist/",
-            "build/",
-            "venv/",
-            ".venv/",
-            ".idea/",
-            "__pycache__/",
-            "%.log$",
-          },
+    opts = {
+      defaults = {
+        prompt_prefix = "🔍 ",
+        selection_caret = "➤ ",
+        layout_strategy = "horizontal",
+        file_ignore_patterns = {
+          "node_modules/",
+          ".git/",
+          "target/",
+          ".next/",
+          ".nuxt/",
+          ".sveltekit/",
+          "dist/",
+          "build/",
+          "venv/",
+          ".venv/",
+          ".idea/",
+          ".adonisjs",
+          "__pycache__/",
+          "%.log$",
         },
-      })
-
+      },
+    },
+    init = function()
       local set = vim.keymap.set
 
       set({ "n", "v" }, "<C-.>", function() -- For my VS Code muscle memory.
@@ -50,6 +49,7 @@ return {
   },
   {
     "nvim-telescope/telescope-ui-select.nvim",
+    dependencies = { "nvim-telescope/telescope.nvim" },
     config = function()
       local telescope = require("telescope")
 
