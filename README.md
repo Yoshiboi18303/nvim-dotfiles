@@ -1,3 +1,9 @@
+# Discontinued
+
+I have changed to [AstroNvim](https://astronvim.com/). A new repository will be coming soon.
+
+---
+
 # Neovim Dotfiles
 
 My personal dotfiles for Neovim, based off of [LazyVim](https://github.com/LazyVim/LazyVim)!
